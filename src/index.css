@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Brand Typography */
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+
+  /* Brand Color Palette */
+  --color-brand-primary: #E63946;
+  --color-brand-hover: #C1121F;
+  --color-brand-dark: #111827;
+  --color-brand-secondary-dark: #0B0F19;
+  --color-brand-bg: #F9FAFB;
+  --color-brand-border: #E5E7EB;
+  --color-brand-success: #22C55E;
+  --color-brand-warning: #F59E0B;
+  --color-brand-danger: #EF4444;
+  --color-brand-premium: #F4B400;
+
+  /* Animation Overrides */
+  --animate-fade-in: fadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  --animate-slide-up: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  --animate-slide-down: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  --animate-glow-pulse: glowPulse 2.5s ease-in-out infinite;
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 4px rgba(230, 57, 70, 0.2); }
+    50% { box-shadow: 0 0 16px rgba(230, 57, 70, 0.5); }
+  }
+}
+
+/* Base resets and defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom premium scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brand-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.24);
+}
+
+/* Luxury visual overlays */
+.luxury-glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.luxury-shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.luxury-shadow-md {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.luxury-shadow-lg {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
